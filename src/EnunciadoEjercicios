@@ -1,0 +1,101 @@
+1-Realizar la práctica de "Practise runTime"
+
+2-Realizar un programa que construya objetos que representen matrices de enteros de dimensiones 100x100, 
+cuyas referencias serán guardadas en una lista. Cuando quede libre tan solo el 10 % de la memoria, 
+el programa "solicitará" liberar el 30 % de la memoria ocupada.
+
+Antes de comezar a construir las matrices y cada vez que se libere "solicite" liberar memoria, 
+el programa  mostrará la cantidad de memoria máxima, libre y  total.
+
+Después de cada "solicitud" de liberación, se preguntará al usuario si se desea continuar.
+
+3-Realizar la práctica "Practica con pruebaProcess" (excluyendo la pregunta  "6º) Lanzar un subproceso, establecer PIPEs...")
+
+4-Redactar un programa que pida al usuario un nombre (o ruta) de un programa java y lance un subproceso para ese programa.
+
+5-V Redactar un programa llamado 'borrador' al que se le pase un nombre de archivo y un nombre de carpeta por la línea de comandos. 
+    El objetivo es eliminar el archivo con ese nombre en la carpeta  o en cualquiera de sus subcarpetas (recursivamente).   
+   
+     Ejemplo de invocación de 'Borrador':
+
+            $ java  Borrador   archivo.txt    /home/usr/migue
+
+
+   A continuación redactar otro programa llamado 'borradorCompleto', al que se le pase
+   un nombre de archivo y varias nombres de subcarpetas.El programa debe lanzar tantos 
+   subprocesos 'borrador' como carpetas se hayan indicado. Una vez lanzados los subprocesos
+   el programa simplemente termina.
+
+   Ejemplo de invocación de 'BorradorCompleto':
+
+            $ java BorradorCompleto    archivo.txt      /home/usr/migue     /home/usr/pepe
+          
+      Con este ejemplo se deben lanzar los siguientes subprocesos:
+          
+              java Borrador   archivo.txt   /home/usr/migue
+              java Borrador   archivo.txt   /home/usr/pepe
+
+6-Realizar la práctica "Practica con pruebaProcess" (pregunta  "6º) Lanzar un subproceso, establecer PIPEs...")
+
+7-Realizar un programa que reciba por la línea de comandos un nombre de programa y argumentos,
+    lance un proceso para ese programa, establezca una tubería con la salidas estándar y de error del subproceso,
+    las "envuelva" en un 'BufferedReader" y muestre por pantalla la salida estándar y de error del subproceso.
+    Ver el ejemplo colgado en la plataforma 'telegrafia.mdl2.com'
+
+8V-Redactar un programa llamado 'invertirCadena' que lea por la entrada estándar una cadena y 
+  muestre por la salida estándar la cadena invertida; por ejemplo: 'hola a todos'--->'sodot a aloh'
+
+  A continuación redactar otro programa llamado 'invertirCadenas' que le pida al usuario
+  varias cadenas, hasta que el usuario introduzca la cadena 'FIN', y muestre esa misma cadena
+  invertida. Para ello, el proceso 'invertirCadena' debe lanzar un subproceso 'invertirCadena'
+  para cada cadena a invertir.
+
+
+9-
+
+a)Redactar las aplicaciones en Java denominadas 'Maximo', 'Mínimo' y 'Media', que calculen respectivamente el maximo, mínimo y media de una serie de números que reciban por la entrada estándar. Realizar dos variantes de estas aplicaciones:
+a.1) Mostrando el resultado por su salida estándar
+a.2) Guardando el resultado en, respectivamente, los ficheros de texto 'Maximo.txt', 'Media.txt' 'Mínimo.txt'
+
+b)Redactar una aplicación 'MaxMinMed' que reciba por su entrada estándar una lista de números e, lanzando los subprocesos 'Maximo', 'Mínimo' y 'Media' calcule esas 3 cantidades. Realizar dos variantes de este ejercicio:
+  b.1) Utilizando la versión a.1) de 'Maximo', 'Mínimo' y 'Media'
+  b.2) Utilizando la versión a.2) de 'Maximo', 'Mínimo' y 'Media'
+
+
+10-Realizar la práctica "Practica con pruebaProcessBuilder" (hasta,excluido, el apartado "Establecer  variables de entorno")
+
+11-Redactar un programa que pida al usuario un nombre (o ruta) de un programa java y lance un subproceso para ese programa
+    utilizando la clase ProcessBuilder
+
+12-Realizar la práctica "Practica con pruebaProcessBuilder" (apartado "Establecer  variables de entorno")
+
+13-Redactar un programa que pida al usuario un nombre (o ruta) de un programa java y lance un subproceso para ese programa
+    utilizando la clase ProcessBuilder, estableciendo adeduadamente el valor de la variable de entorno 'CLASSPATH'
+
+14-Realizar la práctica "Practica con pruebaProcessBuilder" (apartado "Comunicar proceso padre con subprocesos: Redirect")
+
+15V-Redactar un programa llamado 'invertirCadenas2' que realice la misma tarea que 'invertirCadenas' pero utilizando las clases ProcessBuilder y ProcessBuilder.Redirect
+
+16V-Realizar un programa que reciba por la línea de comandos dos nombres de programa y dos nombres de archivo.
+      El programa (proceso padre) creará sendos procesos para los mismos (hijo1 e hijo2).
+      Conectará el primer archivo a la entrada del hijo 1, y el segundo archivo a la salida del hijo2.
+      El programa recibirá la salida del hijo 1 y la enviará a la entrada del hijo 2.
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+17V-Realizar un programa que reciba por la línea de comandos una secuencia compuesta de la cadena '-p', seguida de una palabra, a continuación la cadena '-d' y varias rutas de archivos que almacenan un 'diccionario' cuya estructura se describirá a continuación; esta secuencia de palabra y diccionarios puede repetirse varias veces. Nótese que un mismo 'diccionario' puede estar asociado a varias 'palabras'.
+Por último, recibirá la cadena '-r' a la que seguirá una ruta de un archivo que contendrá un resultado que se describirá a continuación.
+
+*Los 'diccionarios' serán archivos de texto en los que aparecerán definiciones. Cada definición constará de una palabra, ':' un salto de línea y uno o varios párrafos numerados, que serán las distintas definiciones. Por ejemplo:
+
+acrónimo:
+
+1. m. Sigla cuya configuración permite su pronunciación como una palabra; p. ej., ovni: objeto volador no identificado; TIC, tecnologías de la información y la comunicación.
+
+2. m. Vocablo formado por la unión de elementos de dos o más palabras, constituido por el principio de la primera y el final de la última, p. ej., ofi(cina infor)mática, o, frecuentemente, por otras combinaciones, p. ej., so(und) n(avigation) a(nd) r(anging).
+
+*El archivo que contiene el resultado será un archivo de texto, en el que en cada línea aparecerá una palabra, ':' y un número (como texto), una coma ',' y otro número. Por ejemplo:
+
+acronimo: 3,12
+
+La aplicación debe buscar en paralelo en los diferentes diccionarios, de manera que en la búsqueda en un diccionario se busquen todas las palabras que se hayan indicado en la linea de comandos que deben ser buscadas en ese diccionario.
+
+La aplicación debe anotar en el archivo de resultado la cuenta de cuantas veces aparece cada palabra en los distintos diccionarios tanto como palabra a definir (antes de ':') como en la definición de alguna palabra (después de ':'
